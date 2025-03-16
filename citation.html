@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: rgba(128, 128, 128, 0.61);
+        }
+        button{
+            background: lime;
+            padding: 10px 20px;
+            border: none;
+            width: 70%;
+            margin-left: 15%;
+           color: white;
+           margin-top: 10px;
+           border-radius: 10px;
+        }
+        button:focus{
+            
+            background: rgb(36, 177, 36);
+        }
+.citation{
+width: 50%;
+background-color: white;
+text-align: center;
+height: 50vh;
+display: flex;
+gap: 100px;
+flex-direction: column;
+border-radius: 20px;
+box-shadow: 1px 3px 19px;
+    overflow:auto;
+}
+#cita{
+    width: 80%;
+    height: 22vh;
+    margin-left: 10%;
+color: rgb(82, 80, 173);
+font-size: 22px;
+font-family: 'Times New Roman', Times, serif;
+border-radius: 20px;
+
+}
+.ci{
+    color: white;
+    font-size: 38px;
+    text-shadow: 2px 2px  6px black;
+}
+@media (max-width:750px) {
+    .citation{
+        height: 100vh;
+    }
+    #cita{
+        height: 100vh;
+       
+    }
+}
+    </style>
+</head>
+<body>
+    <h1 class="ci">citation</h1>
+   <div class="citation">
+    
+    <button id="bouton">
+
+        citation
+    </button>
+
+    <div id="cita"></div></div>
+    <script>
+        let table=["1. Le succès n’est pas final, l’échec n’est pas fatal : c’est le courage de continuer qui compte, car seul celui qui persévère atteint un jour ses rêves les plus grands.",
+        "2. On ne voit bien qu’avec le cœur, l’essentiel est invisible pour les yeux, car les choses les plus précieuses dans la vie ne se mesurent pas en apparence.",
+        "3. La vie, c’est comme une bicyclette, il faut avancer pour ne pas perdre l’équilibre, car chaque pas en avant est une victoire sur les doutes et les peurs.",
+        "4.L’échec est simplement l’opportunité de recommencer d’une manière plus intelligente, car chaque erreur nous enseigne une leçon précieuse et nous rapproche un peu plus de notre objectif.",
+        "5. Un voyage de mille lieues commence toujours par un premier pas, car même les plus grandes réussites débutent avec une petite décision suivie d’une action déterminée et constante.",
+        "6. Le bonheur ne se trouve pas dans la possession, mais dans l’action, car c’est en vivant pleinement chaque instant que l’on découvre la véritable richesse du cœur et de l’esprit.",
+        "7. Rien n’est impossible à celui qui ose, car la volonté et le courage ouvrent les portes des opportunités et transforment les rêves en une réalité tangible et inébranlable.",
+        "8. Le temps perdu ne se rattrape jamais, alors chaque instant doit être vécu avec intensité, passion et conscience, car demain n’est jamais garanti pour personne dans cette vie imprévisible.",
+        "9. Celui qui veut réussir trouve un moyen, celui qui ne veut pas trouve une excuse, car la différence entre un rêve et un projet, c’est l’action.",
+        "10. Ne regrette jamais hier, la vie est en toi aujourd’hui et tes lendemains sont encore à créer, car chaque jour est une nouvelle page blanche à écrire.",
+        "11. Le courage, ce n’est pas l’absence de peur, mais la capacité de la vaincre, car il faut savoir avancer malgré les doutes et les incertitudes qui nous entourent.",
+        "12. L’avenir appartient à ceux qui croient en la beauté de leurs rêves, car la foi en soi-même est la première étape vers la réussite et l’accomplissement personnel.",
+        "13. Ne crains pas l’échec, crains plutôt de ne jamais essayer, car c’est en osant que l’on découvre notre véritable potentiel et que l’on se dépasse chaque jour.",
+        "14. La meilleure façon de prédire l’avenir, c’est de le créer, car celui qui agit aujourd’hui façonne les opportunités et les succès de demain avec détermination et persévérance.",
+        "15. L’amour est la seule chose qui double quand on le partage, car plus on donne de bonheur autour de soi, plus on en reçoit en retour, sans limites.",]
+        let index=0;
+let bouton=document.getElementById("bouton");
+//Evenement au moment du click du button
+bouton.addEventListener("click" , function (){
+
+const cita=document.getElementById("cita");
+cita.style.backgroundColor="rgba(128, 128, 128, 0.39)";
+cita.style.boxShadow="2px 5px 8px gray";
+cita.innerHTML=table[index];
+index++;
+if(index>=table.length){
+    index=0;
+}
+})
+    </script>
+</body>
+</html>
